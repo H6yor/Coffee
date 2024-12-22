@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+}
+:root{
+    --p-font: 1rem;
+    --big-font: 6.6rem;
+    --text-color: #fff;
+    --main-color: #ae8967;
+    --bg-color: #181C14;
+}
+
+body{
+    background-color: var(--bg-color)
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 7%;
+}
+.logo img{
+    color: var(--text-color);
+}
+#logo1{
+    color: var(--text-color);
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.navlist{
+    display: flex;
+}
+.navlist li{
+    list-style: none;
+}
+.navlist a{
+    display: inline-block;
+    margin: 0 35px;
+    color: var(--text-color);
+    font-size: var(--p-font);
+    list-style: none;
+    text-decoration: none;
+    transition: all .6s ease;
+}
+.navlist a:hover{
+    color: var(--main-color);
+}
+.right-content{
+    display: flex;
+    align-items: center;
+}
+.nav-btn{
+    display: inline-block;
+    color: var(--text-color);
+    padding: 10px 25px;
+    border: 1px solid var(--main-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all .6s ease;
+}
+.nav-btn:hover{
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    background: transparent;
+    border-radius: 10px;
+    transform: translateY(-5px);
+}
+#menu-icon{
+    font-size: 40px;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+    z-index: 10001;
+}
+section{
+    padding: 0 15%;
+}
+.hero{
+    position: relative;
+    background-image: url(img/bg.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.hero-img img{
+    width: 100%;
+    height: auto;
+}
+.hero-text{
+    color: var(--text-color);
+}
+.hero-text h5{
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.hero-text h1{
+    font-size: var(--big-font);
+    font-weight: 900;
+    margin: 15px 0;
+}
+.hero-text p{
+    width: 100%;
+    max-width: 620px;
+    font-size: var(--p-font);
+    font-weight: 400;
+    line-height: 32px;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+.hero-btn{
+    display: flex;
+    align-items: center;
+}
+.hero-btn .join-btn{
+    color: var(--text-color);
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background: var(--main-color);
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all .6s ease;
+}
+.hero-btn .join-btn:hover{
+    background: transparent;
+    border: 1px solid var(--main-color);
+    transform: translateY(-5px);
+    color: var(--main-color);
+}
+.price{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: var(mai);
+    transition: all .6s ease;
+}
+.price:hover{
+    color: var(--main-color);
+}
+.icons{
+    position: absolute;
+    top: 50%;
+    padding: 0 7%;
+    transform: translateY(-50%);
+}
+.icons i{
+    display: block;
+    font-size: 25px;
+    margin: 25px 0;
+    color: var(--text-color);
+    transition: all .6s ease;
+}
+.icons a{
+    text-decoration: none;
+}
+.icons i:hover{
+    color: var(--main-color);
+    transform: translateY(-5px);
+}
+
+.scroll{
+    position: absolute;
+    top: 92%;
+    right: 5%;
+    /* transform: translate(-50%); */
+    
+}
+.scroll a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all .6s ease;
+}
+.scroll a:hover{
+    color: var(--main-color);
+    transform: translateY(-5px);
+}
+.scroll i{
+    font-size: 20px;
+}
+
+@media (max-width: 1670px){
+    :root{
+        --big-font: 5.5rem;
+        --p-font: 15px;
+    }
+}
+
+@media (max-width: 1370px){
+    :root{
+        --big-font: 4.5rem;
+        --p-font: 13px;
+    }
+    .icons{
+        display: none;
+    }
+    section{
+        padding: 0 4%;
+    }
+}
+@media (max-width: 1170px){
+    :root{
+        --big-font: 4rem;
+        --p-font: 11px;
+    }
+    .price{
+        font-size: 12px;
+    }
+    .join-btn{
+        padding: 8px 20px;
+    }
+}
+@media (max-width: 970px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 100%;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 100px 50px;
+        backdrop-filter: blur(32px);
+        transition:  all .6s ease;
+        text-align: center;
+    }
+    .navlist a{
+        display: block;
+        margin: 25px 0;
+        font-size: 20px;
+        transition: all .6s ease;
+        padding: 10px 15px;
+
+    }
+    .navlist a:hover{
+        background-color: var(--main-color);
+        color: var(--text-color);
+        border-radius: 5px;
+    }
+    .navlist.open{
+        left: 0;
+    }
+    .price{
+        font-size: 10px;
+    }
+}
+@media (max-width: 900px){
+    .scroll{
+        display: none;
+    }
+    .hero{
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    .hero-text{
+        padding-top: 130px;
+    }
+    .hero-img{
+        height: 500px;
+        width: 500px;
+        margin: auto;
+    }
+    .hero-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+@media (max-width: 500px){
+    .hero{
+        height: auto;
+    }
+    .hero-img{
+        width: 400px;
+        height: 400px;
+        margin: auto;
+    }
+    :root{
+        --big-font: 3.5rem;
+        --p-font: 12px;
+    }
+    .hero-text h5{
+        font-size: 12px;
+    }
+}
+@media (max-width: 450px){
+    :root{
+        --big-font: 3.1rem;
+    }
+    .hero{
+        padding: 0 5%;
+        height: auto;
+    }
+    .hero-img{
+        width: 360px;
+        height: 360px;
+        margin: 0 auto;
+    }
+}
+
